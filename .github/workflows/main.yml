@@ -18,6 +18,7 @@ jobs:
         server: ftp.zakkal.my.id
         username: myportofolio@zakkal.my.id
         password: myportofolio
+        timeout: 1200000
         exclude: |
           **/.git*
           **/.git*/**
