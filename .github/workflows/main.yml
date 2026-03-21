@@ -23,3 +23,8 @@ jobs:
           **/.git*
           **/.git*/**
           **/node_modules/**
+          **/bun.lock
+          **/bun.lockb
+          **/package-lock.json
+          **/composer.lock
+          tests/**
