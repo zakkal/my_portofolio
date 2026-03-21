@@ -16,7 +16,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: 151.243.222.70
+        server: ftp.zakkal.my.id
         username: myportofolio@zakkal.my.id
         password: myportofolio
         exclude: |
