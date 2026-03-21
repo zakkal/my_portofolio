@@ -37,3 +37,13 @@ Route::post('/logout', function () {
     session()->regenerateToken();
     return redirect('/');
 })->name('logout');
+
+// Saklar Ajaib untuk Database Migration di Hosting
+Route::get('/otomatis-migrate', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+        return 'Yeeey! Database berhasil disambungkan dan Tabel berhasil dijahit! Silakan tutup halaman ini dan kembali Login Google!';
+    } catch (\Exception $e) {
+        return 'Gagal melakukan komando tabel: ' . $e->getMessage();
+    }
+});
