@@ -49,7 +49,7 @@
                 <div>
                     <div class="flex justify-between items-center mb-1.5 ml-1">
                         <label class="block text-xs font-medium text-muted-foreground uppercase tracking-wider">Kata Sandi</label>
-                        <a href="#" class="text-xs text-primary hover:underline">Lupa?</a>
+                        <a href="/forgot-password" class="text-xs text-primary hover:underline">Lupa?</a>
                     </div>
                     <input wire:model="password" type="password" required 
                            class="w-full px-4 py-2.5 rounded-lg bg-secondary/50 border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"

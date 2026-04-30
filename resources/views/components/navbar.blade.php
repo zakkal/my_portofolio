@@ -24,10 +24,7 @@
                         <span>{{ explode(' ', auth()->user()->name)[0] }}</span>
                     </button>
                     <div x-show="userOpen" @click.away="userOpen = false" class="absolute right-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-xl py-1 z-50">
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground">Keluar</button>
-                        </form>
+                        <a href="{{ route('logout') }}" class="block w-full text-left px-4 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground">Keluar</a>
                     </div>
                 </div>
             @else
@@ -54,10 +51,7 @@
             <a href="#projects" @click="open = false" class="text-sm text-muted-foreground hover:text-primary transition-colors py-1">Projects</a>
             <a href="#contact" @click="open = false" class="text-sm text-muted-foreground hover:text-primary transition-colors py-1">Kontak</a>
             @auth
-                <form method="POST" action="{{ route('logout') }}" class="py-1">
-                    @csrf
-                    <button type="submit" class="text-sm text-muted-foreground hover:text-primary transition-colors">Keluar</button>
-                </form>
+                <a href="{{ route('logout') }}" class="text-sm text-muted-foreground hover:text-primary transition-colors py-1 block">Keluar</a>
             @else
                 <a href="/login" @click="open = false" class="text-sm text-muted-foreground hover:text-primary transition-colors py-1">Masuk</a>
             @endauth

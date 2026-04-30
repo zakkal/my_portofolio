@@ -26,12 +26,14 @@ Route::middleware('auth')->group(function () {
 Route::middleware('guest')->group(function () {
     Route::get('/login', Login::class)->name('login');
     Route::get('/register', Register::class)->name('register');
+    Route::get('/forgot-password', App\Livewire\Auth\ForgotPassword::class)->name('password.request');
+    Route::get('/reset-password/{token}', App\Livewire\Auth\ResetPassword::class)->name('password.reset');
 });
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
-Route::post('/logout', function () {
+Route::get('/logout', function () {
     auth()->logout();
     session()->invalidate();
     session()->regenerateToken();
