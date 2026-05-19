@@ -9,6 +9,7 @@ $skills = [
   ['name' => 'IoT Development', 'icon' => '📡'],
   ['name' => 'API Integration', 'icon' => '🔗'],
   ['name' => 'Embedded System', 'icon' => '🛠️'],
+  ['name' => 'ESP32', 'icon' => '⚙️'],
 ];
 @endphp
 

@@ -4,12 +4,28 @@ $webProjects = [
     "title" => "Rembulan4",
     "description" => "Website sistem akademik untuk menginput nilai murid, mencatat nilai ibadah, dan mengelola data siswa.",
     "link" => "https://rembulan4.zakkal.my.id",
+    "image" => "images/projects/rembulan.png",
+    "tags" => ["Laravel", "Livewire", "MySQL"],
+  ],
+  [
+    "title" => "Absensi Student (Face Recognition)",
+    "description" => "Aplikasi absensi siswa dengan fitur pengenalan wajah (Face Recognition) untuk pencatatan kehadiran yang lebih akurat.",
+    "link" => "https://absensi.student.zakkal.my.id/",
+    "image" => "images/projects/absensi.png",
+    "tags" => ["Laravel", "Face Recognition", "MySQL"],
+  ],
+  [
+    "title" => "Sistem Laporan Santri",
+    "description" => "Website khusus untuk mencatat dan mengelola laporan progres tahfidz serta kegiatan harian santri.",
+    "link" => "https://laporan.santri.mtz.zakkal.my.id/",
+    "image" => "images/projects/laporan-santri.png",
     "tags" => ["Laravel", "Livewire", "MySQL"],
   ],
   [
     "title" => "Sistem Absen Halaqah",
     "description" => "Website untuk mencatat dan mengelola kehadiran halaqah secara digital.",
     "link" => "https://halaqah.zakkal.my.id",
+    "image" => "images/projects/halaqah.png",
     "tags" => ["Laravel", "Livewire"],
   ],
   [
@@ -73,7 +89,17 @@ $iotProjects = [
                 <div x-data="{ shown: false }" x-intersect.once="shown = true"
                      :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
                      style="transition-delay: {{ $index * 80 }}ms"
-                     class="transition-all duration-500 ease-out bg-card border border-border rounded-xl p-6 card-glow flex flex-col h-full">
+                     class="group transition-all duration-500 ease-out bg-card border border-border rounded-xl p-5 card-glow flex flex-col h-full overflow-hidden">
+                    
+                    @if(isset($project['image']))
+                    <div class="w-full h-40 mb-5 rounded-lg overflow-hidden bg-secondary relative">
+                        <!-- Menggunakan gambar lokal -->
+                        <img src="{{ asset($project['image']) }}" alt="{{ $project['title'] }}" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                             onerror="this.src='https://placehold.co/600x400/1e293b/a5b4fc?text=Gambar+Project'">
+                    </div>
+                    @endif
+
                     <div class="flex items-start justify-between mb-3">
                         <h3 class="text-lg font-bold text-foreground">{{ $project['title'] }}</h3>
                         @if(isset($project['link']))
