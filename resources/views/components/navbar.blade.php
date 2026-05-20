@@ -11,7 +11,7 @@
             <a href="#projects" class="text-sm text-muted-foreground hover:text-primary transition-colors">Projects</a>
             <a href="#contact" class="text-sm text-muted-foreground hover:text-primary transition-colors">Kontak</a>
             
-            @auth
+            {{-- @auth
                 <div x-data="{ userOpen: false }" class="relative">
                     <button @click="userOpen = !userOpen" class="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors">
                         @if(auth()->user()->avatar)
@@ -29,7 +29,7 @@
                 </div>
             @else
                 <a href="/login" class="text-sm px-4 py-1.5 rounded-md bg-secondary text-foreground hover:bg-secondary/80 border border-border transition-all">Masuk</a>
-            @endauth
+            @endauth --}}
         </div>
 
         <!-- Mobile toggle -->
@@ -50,11 +50,11 @@
             <a href="#skills" @click="open = false" class="text-sm text-muted-foreground hover:text-primary transition-colors py-1">Keahlian</a>
             <a href="#projects" @click="open = false" class="text-sm text-muted-foreground hover:text-primary transition-colors py-1">Projects</a>
             <a href="#contact" @click="open = false" class="text-sm text-muted-foreground hover:text-primary transition-colors py-1">Kontak</a>
-            @auth
+            {{-- @auth
                 <a href="{{ route('logout') }}" class="text-sm text-muted-foreground hover:text-primary transition-colors py-1 block">Keluar</a>
             @else
                 <a href="/login" @click="open = false" class="text-sm text-muted-foreground hover:text-primary transition-colors py-1">Masuk</a>
-            @endauth
+            @endauth --}}
         </div>
     </div>
 </nav>

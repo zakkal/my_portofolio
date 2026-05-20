@@ -17,11 +17,11 @@ use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
 use App\Http\Controllers\Auth\GoogleController;
 
-Route::middleware('auth')->group(function () {
+// Route::middleware('auth')->group(function () {
     Route::get('/', function () {
         return view('welcome');
     })->name('home');
-});
+// });
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', Login::class)->name('login');
