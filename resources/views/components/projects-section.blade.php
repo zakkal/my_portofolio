@@ -31,6 +31,7 @@ $webProjects = [
   [
     "title" => "Sistem Pengaduan Masyarakat",
     "description" => "Platform website untuk masyarakat mengirimkan laporan dan pengaduan secara online.",
+    "image" => "project/image copy 2.png",
     "tags" => ["Laravel", "PHP", "MySQL"],
   ],
   [
@@ -51,7 +52,6 @@ $iotProjects = [
   [
     "title" => "Drone Monitoring Air",
     "description" => "Drone monitoring air berbasis chip ESP32 menggunakan sensor pH, Turbidity, dan TDS, diprogram menggunakan bahasa C++ (Arduino IDE).",
-    "image" => "project/image.png",
     "tags" => ["ESP32", "Arduino IDE", "Sensor", "Drone"],
   ],
   [
@@ -143,15 +143,6 @@ $iotProjects = [
                      :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
                      style="transition-delay: {{ $index * 80 }}ms"
                      class="transition-all duration-500 ease-out bg-card border border-border rounded-xl p-6 card-glow flex flex-col h-full">
-                    
-                    @if(isset($project['image']))
-                    <div class="w-full h-40 mb-5 rounded-lg overflow-hidden bg-secondary relative">
-                        <img src="{{ asset($project['image']) }}" alt="{{ $project['title'] }}" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                             onerror="this.src='https://placehold.co/600x400/1e293b/a5b4fc?text=Gambar+Project'">
-                    </div>
-                    @endif
-
                     <div class="flex items-start justify-between mb-3">
                         <h3 class="text-lg font-bold text-foreground">{{ $project['title'] }}</h3>
                         @if(isset($project['link']))
