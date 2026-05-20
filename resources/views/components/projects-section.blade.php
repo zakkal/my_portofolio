@@ -31,7 +31,7 @@ $webProjects = [
   [
     "title" => "Sistem Pengaduan Masyarakat",
     "description" => "Platform website untuk masyarakat mengirimkan laporan dan pengaduan secara online.",
-    "image" => "project/image copy 2.png",
+    "image" => "project/Screenshot (714).png",
     "tags" => ["Laravel", "PHP", "MySQL"],
   ],
   [
